@@ -52,8 +52,11 @@ public List<Post> getAllPosts() {
 }
 
 public Post findById(Long id) {
-    return null;
-}
-
+        for (Post post : ALL_POSTS) {
+            if(post.getId()==id)
+                return post;
+        }
+        return null;
+    }
 
 }
